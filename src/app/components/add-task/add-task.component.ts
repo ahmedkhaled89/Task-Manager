@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Task } from '../../Task';
+import { UiService } from '../../services/ui.service';
 
 @Component({
   selector: 'app-add-task',
@@ -17,7 +18,7 @@ export class AddTaskComponent {
   day: string;
   reminder: boolean = false;
 
-  constructor() {}
+  constructor(private uiService: UiService) {}
 
   onSubmit() {
     if (!this.day) {
