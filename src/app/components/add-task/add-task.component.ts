@@ -17,6 +17,8 @@ export class AddTaskComponent {
   day: string;
   reminder: boolean = false;
 
+  constructor() {}
+
   onSubmit() {
     if (!this.day) {
       alert('Please Add a task');
