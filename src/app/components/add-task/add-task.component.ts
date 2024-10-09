@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Task } from '../../Task';
 
@@ -10,6 +10,7 @@ import { Task } from '../../Task';
   styleUrl: './add-task.component.css',
 })
 export class AddTaskComponent {
+  @Input() task: Task;
   @Output() onAddTask: EventEmitter<Task> = new EventEmitter();
 
   text: string;
